@@ -1,5 +1,5 @@
 objects = main.o
-LIBS =  -lstring -stdlib -liostream -stdc++
+LIBS =  -lstring -lstdlib -liostream -lstdc++
 
 travis-test : $(objects)
 	test -d bin || mkdir bin
