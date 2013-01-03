@@ -1,11 +1,12 @@
 objects = main.o
+LIBS =  -lstring -stdlib -liostream -stdc++
 
 travis-test : $(objects)
 	test -d bin || mkdir bin
-	cc -o bin/travis-test $(objects)
+	$(CXX) $(LIBS) -o bin/travis-test $(objects)
 
 main.o : main.cpp
-	cc -c main.cpp -lstdc++
+	$(CXX) $(LIBS) -c main.cpp
 
 clean :
 	rm -rf bin *.o
