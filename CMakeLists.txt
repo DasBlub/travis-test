@@ -4,4 +4,4 @@ add_executable(travis-test main.cpp)
 
 enable_testing()
 add_test(NAME tst1
-         COMMAND mytest.sh)
+         COMMAND mytest.sh $<TARGET_FILE:travis-test>)
