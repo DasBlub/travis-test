@@ -3,10 +3,11 @@ language: cpp
 compiler:
   - gcc
   - clang
+  - i586-mingw32msvc-gcc
 
-matrix:
-  include:
-    - compiler: i586-mingw32msvc-gcc
+#matrix:
+#  include:
+#    - compiler: i586-mingw32msvc-gcc
 
 script:
   - test -d bin || mkdir bin
