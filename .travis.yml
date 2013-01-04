@@ -13,4 +13,5 @@ script:
 after_script:
   - pwd
   - ls -al
-  - ./travis-test
+  - ctest -V .
+#  - ./travis-test
