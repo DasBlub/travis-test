@@ -9,3 +9,7 @@ script:
   - cd bin
   - cmake ..
 
+after_script:
+  - pwd
+  - ls -al
+  - ./travis-test
