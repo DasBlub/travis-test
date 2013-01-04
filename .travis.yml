@@ -1,6 +1,11 @@
 language: cpp
+
 compiler:
   - gcc
   - clang
-script: make
+
+script:
+  - test -d bin || mkdir bin
+  - cd bin
+  - cmake ..
 

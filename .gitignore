@@ -1,3 +1,6 @@
+# Don't ignore .git* files
+!.gitignore
+
 # Compiled Object files
 *.slo
 *.lo
@@ -11,3 +14,6 @@
 *.lai
 *.la
 *.a
+
+# Compiler output
+bin/*
