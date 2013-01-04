@@ -8,6 +8,7 @@ script:
   - test -d bin || mkdir bin
   - cd bin
   - cmake ..
+  - cmake --build .
 
 after_script:
   - pwd
