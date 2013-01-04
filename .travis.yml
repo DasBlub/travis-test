@@ -2,16 +2,17 @@ language: cpp
 
 compiler:
   - gcc
+  - clang
+
+matrix:
+  include:
+    - compiler: i586-mingw32msvc-gcc
 
 script:
   - test -d bin || mkdir bin
   - cd bin
   - cmake ..
   - cmake --build .
-  - cp ../mytest.sh .
 
 after_script:
-  - pwd
-  - ls -al
-  - ctest -V .
-#  - ./travis-test
+  - ./travis-test
