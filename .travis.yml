@@ -4,11 +4,8 @@ compiler:
   - gcc
   - clang
 
-matrix:
-  include:
-    - env: CC=i586-mingw32msvc-gcc CXX=i586-mingw32msvc-g++
-
 script:
+  - cat /proc/cpuinfo
   - test -d bin || mkdir bin
   - cd bin
   - cmake ..
